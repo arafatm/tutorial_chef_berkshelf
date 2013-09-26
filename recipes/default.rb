@@ -6,10 +6,10 @@
 # 
 # All rights reserved - Do Not Redistribute
 #
-group "myface"
+group node[:myface][:group]
 
-user "myface" do
-  group "myface"
+user node[:myface][:user] do
+  group node[:myface][:group]
   system true
   shell "/bin/bash"
 end
